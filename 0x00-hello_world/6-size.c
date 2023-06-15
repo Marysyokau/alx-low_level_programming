@@ -1,9 +1,5 @@
 #include<stdio.h>
-/**
- * main - Entry point
- *
- * Return Always 0 (Success)
- */
+/* Use of build in library function to determine size of data in bytes*/
 int main(void)
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
