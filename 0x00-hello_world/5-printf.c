@@ -1,6 +1,7 @@
 #include<stdio.h>
-/**Betty comments on use of printf
- * main - Entry point
+/**
+  * main - Entry point
+  *
  * Return: 0(Success)
  */
 
