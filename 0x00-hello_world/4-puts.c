@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * puts(print option of a line)
- * Retutn: Always 0(Success)
+ * Return: Always 0(Success)
  */
 int main(void)
 {
