@@ -1,5 +1,7 @@
 #include<stdio.h>
-/*Betty comments on use of printf*/
+/**Betty comments on use of printf
+ * main - Entry point
+ * Return: 0(Success)*/
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
