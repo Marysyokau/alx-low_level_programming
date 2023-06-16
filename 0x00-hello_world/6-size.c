@@ -1,7 +1,8 @@
 #include <stdio.h>
+
 /** 
- * Use of build in library function to determine size of data in bytes
  * main - Entry point
+ * Use of build in library function to determine size of data in bytes
  * Return: Always 0(Success)
  */
 int main(void)
