@@ -1,5 +1,8 @@
 #include<stdio.h>
-/*4-puts ,output using puts*/
+/**
+ * main - Entry point
+ * Retutn: 0(Success)
+ */
 
  int main(void)
 {
