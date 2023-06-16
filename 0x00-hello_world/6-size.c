@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/** 
- * main - Entry point
- * Use of build in library function to determine size of data in bytes
+/**
+ * main - Entry point where a program commences
+ * detecting the values of bytes
  * Return: Always 0(Success)
  */
 int main(void)
@@ -12,6 +12,5 @@ int main(void)
 	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(float));
-	
 	return (0);
-}	
+}
