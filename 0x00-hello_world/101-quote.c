@@ -1,8 +1,13 @@
-#include<stdio.h>
-#include<unistd.h>
-/*using other form of output*/
+#include <stdio.h>
+
+/**
+ * main -Entry point for every c program
+ * using write to do standard output
+ * Return: Always 1(Success)
+ */
 int main(void)
 {
-	putchar("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	write(2,
+	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
-}
+}	
