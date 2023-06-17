@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Entry point 
- * The last digit
+ * main - Entry point of process
+ * computing modulus 10
  * Return: Always 0(Success)
- */ 
+ */
 int main(void)
 {
 	int n;
