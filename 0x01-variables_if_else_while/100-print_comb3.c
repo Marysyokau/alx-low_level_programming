@@ -1,28 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-#inlude <time.h>
+#include <time.h>
 /**
- * main - Entry point 
- * The last digit
- * Return: Always 0(Success)
- */ 
+ * main - Entry point  of program
+ * possible two digits combination
+ * Return : Always 0(Success)
+ */
 int main(void)
 {
-        int n;
+	int i;
+	int j;
 
-        srand(time(0));
-        n = rand() - RAND_MAX / 2 ;
-        
-        if ((n % 10) > 5)
-        {
-                printf("Last digit of %d is %d and is greater than 5\n", n,n % 10);
-        }
-        else if ((n % 10) < 6 && (n % 10) != 0)
-        {
-                printf("Lat digit of %d is %d and is less than 6 and not 0\n",
-                        n, n % 10);
-        }
-        else
-        {
-                pintf("Lat digit of %d is %d and is 0\n", n, n % 10)
-        }
+	for (i = 0; i < 9; i++)
+	{
+		for (j = i; j < 10; j++)
+		{
+			putchar(i + '0');
+			putchar(j + '0');
+
+			if (i < 8 || j < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
