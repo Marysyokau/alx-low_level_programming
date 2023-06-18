@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Entry point
- * prints all possible different combinations of three digits
- * Return: Always 0(Success)
- */ 
+ * main - Entry point of process
+ * prints all possible combinations of three digits
+ * Return: Always 0(Succcess)
+ */
 int main(void)
 {
 	int i, j, k;
@@ -25,7 +25,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}			
+			}
 		}
 	}
 	putchar('\n');
