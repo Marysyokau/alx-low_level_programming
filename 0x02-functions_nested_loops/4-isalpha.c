@@ -2,13 +2,13 @@
 
 /**
  * _isalpha - checks alphabetic numbers
- * c the character to be checked
+ * @c the character to be checked
  * Return: 1 for alphabet else 0
  */
 
 int _isalpha(int c)
 {
-	if ((c >= 65 && c <=90) || (c >= 97 && c <=122))
+	if ((c >= 65 && c <=90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
