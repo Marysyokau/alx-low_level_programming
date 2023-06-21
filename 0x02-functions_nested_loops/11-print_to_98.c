@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - all natural numbers
+ * print_to_98 - all natural number
+ * @n: checke no
  * Return: Always (0)
  */
 
