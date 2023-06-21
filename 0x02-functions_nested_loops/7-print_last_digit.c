@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - last digit of a number
- * c checker number
+ * @c: checker number
  * Return: value of last digit
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * _abs - find absolute value of int
- * c the checker number
+ * @c: the checker number
  * Return: absolute value
  */
 
