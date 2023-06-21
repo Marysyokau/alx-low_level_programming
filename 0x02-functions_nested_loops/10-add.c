@@ -2,7 +2,8 @@
 
 /**
  * add - sum up two numbers
- * n1 and n2 are the variables
+ * @n1: variable one
+ * @n2: are the variables
  * Return: the int value
  */
 
