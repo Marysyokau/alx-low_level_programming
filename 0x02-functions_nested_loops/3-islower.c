@@ -2,7 +2,7 @@
 
 /**
  * _islower - print lowercase letters
- *
+ * @c: checker character
  * Return: Always 1(lowercase) 0(not lowercase)
  */
 
