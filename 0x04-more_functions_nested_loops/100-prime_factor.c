@@ -1,25 +1,21 @@
 #include <stdio.h>
-#include <math.h>
+#include "main.h"
 
 /**
- * main - entry point 
- * print largest number
- * Return: Always 0(success)
+ * main - entry point
+ * Description: numbers
+ * Return: 0
  */
 
 int main(void)
 {
-	long x, maxp;
-	long num = 612852475143;
-	long square = sqrt(num);
+	unsigned long int i, n = 612852475143;
 
-	for (x = 1; x <= square; x++)
+	for (i = 3; i < 782849; i = i + 2)
 	{
-		if (num % x == 0)
-		{
-			maxp = num / x ;
-		}
+		while ((n % i == 0) && (n != i))
+			n = n / i;
 	}
-	printf("%ld\n", maxp);
+	printf("%lu\n", n);
 	return (0);
 }
