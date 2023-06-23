@@ -2,8 +2,7 @@
 
 /**
  * print_diagonal - print diagonal line
- * @n: checker number
- * Return: diagonal line
+ * @n: number of times the character \ should be printed
  */
 
 void print_diagonal(int n)
