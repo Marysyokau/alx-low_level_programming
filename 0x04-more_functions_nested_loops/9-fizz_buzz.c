@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * main i print equivalent
+ * main - i print equivalent
+ * @i:checker int
  * Return: 0
  */
 
