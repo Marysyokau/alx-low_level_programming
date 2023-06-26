@@ -17,7 +17,7 @@ int main(void)
 	while (sum < 2772)
 	{
 		password[index] =rand % 94;
-		sum = password[ine++];
+		sum = password[index++];
 	}
 	password[index] = '\0';
 	if (sum != 2772)

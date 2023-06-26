@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts - characters starting with firstcharacter
+ * puts2 - characters starting with firstcharacter
  * @str: string
  * Return: string
  */
