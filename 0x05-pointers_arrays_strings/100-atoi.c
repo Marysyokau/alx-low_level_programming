@@ -1,5 +1,5 @@
 #include "main.h"
-#include <limits.h>
+#include <limits.hi>
 #include <stdio.h>
 
 /**
@@ -36,6 +36,6 @@ int _atoi(char *s)
 		}
 		result = result * 10 + digit;
 		s++;
-       		}
-	 return (result * sign);
+	}
+	return (result * sign);
 }
