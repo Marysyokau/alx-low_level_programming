@@ -22,7 +22,7 @@ int _atoi(char *s)
 		sign = -1;
 		sign++;
 	}
-	else if(*s == '+')
+	else if (*s == '+')
 	{
 		s++;
 	}
