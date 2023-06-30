@@ -10,10 +10,10 @@ char *rot13(char *str)
 {
 	char *init = str;
 	char *result = str;
+	char new = *init;
 
 	while (*init != '\0')
 	{
-		char new = *init;
 		if ((new >= 'a' && new <= 'm') || (new >= 'A' && new <= 'M'))
 		{
 			*result = new + 13;
@@ -30,5 +30,5 @@ char *rot13(char *str)
 		result++;
 	}
 	result = '\0';
-	return str;
+	return (str);
 }
