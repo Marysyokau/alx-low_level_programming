@@ -1,30 +1,31 @@
 #include "main.h"
 /**
  * cap_string - string
- * @str: checker digit
+ * @s: checker digit
  * Return: string capitalised after separators
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int index = 0;
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	while (str[index])
+	while (*(s + i))
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			index++;
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
+			}
 		}
-		if (str[index - 1] == ' ' ||
-		str[index - 1] == '\t' || str[index - 1] == '\n' ||
-		str[index - 1] == ',' || str[index - 1] == ';' ||
-		str[index - 1] == '!' || str[index - 1] == '?' ||
-		str[index - 1] == '"' || str[index - 1] == '(' ||
-		str[index - 1] == ')' || str[index - 1] == '{' ||
-		str[index - 1] == '}' || index == 0)
-		{
-			str[index] -= 32;
-		}
-		index++;
+		i++;
 	}
+	return (s);
 }

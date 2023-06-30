@@ -11,38 +11,37 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int sum, len1 = 0, len2 = 0, i = 0, j = 0, carry = 0;
-	int index = size_r - 2;
+	int i, j, k, l, m, n;
 
-	while (n1[len1] != '\0')
-	{
-		len1++;
-	}
-	while (n2[len2] != '\0')
-	{
-		len2++;
-	}
-	if (len1 >= size_r || len2 >= size_r)
-	{
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
 		return (0);
-	}
-	for (i = len1 - 1, j = len2 - 1; i >= 0 || carry != 0; i--, j--)
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		int digit1 = (i >= 0) ? (n1[i] - '0') : 0;
-	        int digit2 = (j >= 0) ? (n2[j] - '0') : 0;
-		sum = digit1 + digit2 + carry;
-		carry = sum / 10;
-		r[index] = (sum % 10) + '0';
-		index++;
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
+		{
+			break;
+		}
+		m = n / 10;
+		r[k] = n % 10 + '0';
 	}
-	r[index] = '\0';
-	
-	for ( i = 0, i  = index - 1; i < j; i++, j--)
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
 	{
-		char temp = r[i];
-
-		r[i] = r[j];
-		r[j] = temp;
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
 	}
 	return (r);
 }
