@@ -8,27 +8,21 @@
 
 char *rot13(char *str)
 {
-	char *init = str;
-	char *result = str;
-	char new = *init;
+	int i, j;
 
-	while (*init != '\0')
+	char alphA[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char alphB[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((new >= 'a' && new <= 'm') || (new >= 'A' && new <= 'M'))
+		for (j = 0; alphA[j] != '\0'; j++)
 		{
-			*result = new + 13;
+			if (str[i] == alphA[j])
+			{
+				str[i] = alphB[j];
+				break;
+			}
 		}
-		else if ((new >= 'n' && new <= 'z') || (new >= 'N' && new <= 'z'))
-		{
-			*result = new - 13;
-		}
-		else
-		{
-			*result = new;
-		}
-		init++;
-		result++;
 	}
-	result = '\0';
 	return (str);
 }
