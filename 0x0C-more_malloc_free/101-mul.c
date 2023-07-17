@@ -12,5 +12,7 @@
 
 int main(void)
 {
-
+	unsigned int mul, num1 , num2;
+	
+	mul = num1 * num2;
 }
