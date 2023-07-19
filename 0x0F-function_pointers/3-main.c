@@ -1,17 +1,19 @@
-#include "3-calc.h"
+#include <stdlib.h>
 #include <stdio.h>
+#include "3-calc.h"
 
 /**
- * main - entry point
- * if the number of arguments is wrong, print Error, followed by a new line, and exit with 98
- * if the operator is none of the above, print Error, followed by a new line, and etatus 99
- * if the user tries to divide (/ or %) by 0, print Error,and exit with the status 100
+ * main - get_op_func has operators correlated with
+ * func signs and funcs from op_func
+ * if not 4 arguments, return Error & exit 98
+ * if op is null, return Error & exit 99
+ * if div or mod 0, return Error & exit 100
+ * run calc, input one, operator, input two = pointer res to get_op
  * @argc: arguments
  * @argv: double pointer to arguments
- * Return: 0(success)
+ * Return: 0
  */
-
-int main(void)
+int main(int argc, char *argv[])
 {
 	int one, two, ans;
 	int (*res)(int, int);
@@ -27,13 +29,14 @@ int main(void)
 	two = atoi(argv[3]);
 	get_op = argv[2];
 
-	if(get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
+	/* added edge case if argv[2] was longer than 1 char*/
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	
-	if ((*get_op =='/' || *get_op == '%' ) && (*argv[3] == '0'))
+
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
