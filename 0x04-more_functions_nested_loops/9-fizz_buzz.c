@@ -3,7 +3,6 @@
 
 /**
  * main - i print equivalent
- * @i:checker int
  * Return: 0
  */
 
