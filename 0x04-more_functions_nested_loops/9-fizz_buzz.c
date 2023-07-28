@@ -2,9 +2,15 @@
 #include <stdio.h>
 
 /**
+<<<<<<< HEAD
 * main - i print q int
 * Return: 0
 */
+=======
+ * main - i print equivalent
+ * Return: 0
+ */
+>>>>>>> eefefc8b2b916bcf7e4b2ab434d0c7518c65f99f
 
 int main(void)
 {
