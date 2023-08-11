@@ -27,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	num_read = fread(new, sizeof(char), letters, fp);
 	printf("%s", new);
 
-	free (new);
+	free(new);
 	fclose(fp);
 
 	return (num_read);
