@@ -11,16 +11,24 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fp;
+	FILE *fp;
 	char *new;
+	ssize_t num_read = 0;
 
 	fp = fopen(filename, "r");
-
-	if (fp == -1)
+	if (fp == NULL)
 		return (0);
-	new = fgets(filename);
-	fprintf("%s", new);
+	new = malloc(letters * sizeof(char));
+	if (new == NULL)
+	{
+		fclose(fp);
+		return (0);
+	}
+	num_read = fread(new, sizeof(char), letters, fp);
+	printf("%s", new);
 
+	free (new);
 	fclose(fp);
-	return (new);
+
+	return (num_read);
 }
